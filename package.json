@@ -1,0 +1,15 @@
+{
+  "name": "testerhome-weapp",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-register": "^6.22.0"
+  }
+}
