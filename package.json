@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "trash dist/* && gulp build"
+    "build": "trash dist/* !dist/.gitignore && gulp build"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.22.0",

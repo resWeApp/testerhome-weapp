@@ -39,7 +39,7 @@ gulp.task('toml', () => {
 })
 
 gulp.task('json', () => {
-  return gulp.src(`${SOURCES_PATTERN}.json`).pipe(change((content, done) => {
+  return gulp.src(`${SOURCES_PATTERN}.json`).pipe(change((content, next) => {
     const pages = glob.sync(`${SOURCES_PATTERN}.js`).filter((path) => {
       return path.match(/\/[A-Z](\w+)?\//g)
     }).map((n) => {
@@ -54,7 +54,7 @@ gulp.task('json', () => {
   })).pipe(gulp.dest(DESTINATION_DIR))
 })
 
-gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'stylus'))
+gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'stylus')))
 
 gulp.task('watch', () => {
   gulp.watch(`${SOURCES_PATTERN}.vue`, gulp.series('vue'))
