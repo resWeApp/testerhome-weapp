@@ -56,12 +56,13 @@ gulp.task('images', () => {
   return gulp.src(`${SOURCES_PATTERN}.png`).pipe(gulp.dest(DESTINATION_DIR))
 })
 
-gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'stylus')))
+gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'images', 'stylus')))
 
 gulp.task('watch', () => {
   gulp.watch(`${SOURCES_PATTERN}.vue`, gulp.series('vue'))
   gulp.watch(`${SOURCES_PATTERN}.json`, gulp.series('json'))
   gulp.watch(`${SOURCES_PATTERN}.toml`, gulp.series('toml'))
+  gulp.watch(`${SOURCES_PATTERN}.png`, gulp.series('images'))
   gulp.watch(`${SOURCES_PATTERN}.styl`, gulp.series('stylus'))
   gulp.watch(`${SOURCES_PATTERN}.js`, gulp.series('babel', 'json'))
 })
