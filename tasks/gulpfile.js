@@ -46,11 +46,9 @@ gulp.task('json', () => {
       return n.replace(/^src\//g, '').replace(/\.js$/g, '')
     })
 
-    next(null, JSON.stringify(Object.assign(content, {
+    next(null, JSON.stringify(Object.assign(JSON.parse(content), {
       pages: pages
     }), null, 2))
-  })).pipe(rename({
-    extname: '.json'
   })).pipe(gulp.dest(DESTINATION_DIR))
 })
 
