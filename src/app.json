@@ -13,25 +13,25 @@
     "list": [
       {
         "text": "探索",
-        "pagePath": "pages/Home/index",
+        "pagePath": "pages/layouts/Explore/index",
         "iconPath": "images/explore_light.png",
         "selectedIconPath": "images/explore_dark.png"
       },
       {
         "text": "话题",
-        "pagePath": "pages/Home/index",
+        "pagePath": "pages/layouts/Topic/index",
         "iconPath": "images/nodes_light.png",
         "selectedIconPath": "images/nodes_dark.png"
       },
       {
         "text": "消息",
-        "pagePath": "pages/Home/index",
+        "pagePath": "pages/layouts/Explore/index",
         "iconPath": "images/messages_light.png",
         "selectedIconPath": "images/messages_dark.png"
       },
       {
         "text": "我的",
-        "pagePath": "pages/Home/index",
+        "pagePath": "pages/layouts/Explore/index",
         "iconPath": "images/users_light.png",
         "selectedIconPath": "images/users_dark.png"
       }
