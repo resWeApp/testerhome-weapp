@@ -14,14 +14,14 @@
       {
         "text": "首页",
         "pagePath": "pages/Home/index",
-        "iconPath": "images/home.png",
-        "selectedIconPath": ""
+        "iconPath": "images/explore.png",
+        "selectedIconPath": "images/explore.png"
       },
       {
         "text": "首页",
         "pagePath": "pages/Home/index",
-        "iconPath": "images/home.png",
-        "selectedIconPath": ""
+        "iconPath": "images/nodes.png",
+        "selectedIconPath": "images/nodes.png"
       }
     ]
   }
