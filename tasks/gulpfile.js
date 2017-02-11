@@ -52,6 +52,10 @@ gulp.task('json', () => {
   })).pipe(gulp.dest(DESTINATION_DIR))
 })
 
+gulp.task('images', () => {
+  return gulp.src(`${SOURCES_PATTERN}.png`).pipe(gulp.dest(DESTINATION_DIR))
+})
+
 gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'stylus')))
 
 gulp.task('watch', () => {
