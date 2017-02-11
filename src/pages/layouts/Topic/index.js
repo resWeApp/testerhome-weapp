@@ -1,4 +1,5 @@
 import i18n from '../../../utils/i18n'
+import {API_URL} from '../../../utils/url'
 
 module.exports = Page({
   data: {
@@ -9,5 +10,15 @@ module.exports = Page({
     })
   },
   onLoad() {
+    wx.request({
+      url: `${API_URL}/topics.json`,
+      success(response) {
+        console.log(response)
+      }
+    })
+  },
+  onRequestSuccess(response) {
+    console.log('onRequestSuccess')
+    // this.setData({})
   }
 })
