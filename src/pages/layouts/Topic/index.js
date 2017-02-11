@@ -5,7 +5,7 @@ module.exports = Page({
   },
   onReady() {
     wx.setNavigationBarTitle({
-      title: i18n.zh_CN.explore
+      title: i18n.zh_CN.topics
     })
   },
   onLoad() {

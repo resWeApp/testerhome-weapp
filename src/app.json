@@ -1,8 +1,8 @@
 {
   "window": {
     "backgroundTextStyle": "light",
+    "navigationBarTitleText": "探索",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "TesterHome",
     "navigationBarBackgroundColor": "white"
   },
   "tabBar": {
