@@ -6,22 +6,34 @@
     "navigationBarBackgroundColor": "red"
   },
   "tabBar": {
-    "backgroundColor": "#fbfbfb",
-    "selectedColor": "#d81e06",
+    "backgroundColor": "#f8f9fa",
+    "selectedColor": "#4c6ef5",
     "borderStyle": "white",
-    "color": "#fbfbfb",
+    "color": "#adb5bd",
     "list": [
       {
-        "text": "首页",
+        "text": "探索",
         "pagePath": "pages/Home/index",
-        "iconPath": "images/explore.png",
-        "selectedIconPath": "images/explore.png"
+        "iconPath": "images/explore_light.png",
+        "selectedIconPath": "images/explore_dark.png"
       },
       {
-        "text": "首页",
+        "text": "话题",
         "pagePath": "pages/Home/index",
-        "iconPath": "images/nodes.png",
-        "selectedIconPath": "images/nodes.png"
+        "iconPath": "images/nodes_light.png",
+        "selectedIconPath": "images/nodes_dark.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/Home/index",
+        "iconPath": "images/messages_light.png",
+        "selectedIconPath": "images/messages_dark.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/Home/index",
+        "iconPath": "images/users_light.png",
+        "selectedIconPath": "images/users_dark.png"
       }
     ]
   }
