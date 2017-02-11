@@ -1,9 +1,9 @@
 {
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTextStyle": "red",
-    "navigationBarTitleText": "testerhome",
-    "navigationBarBackgroundColor": "red"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "TesterHome",
+    "navigationBarBackgroundColor": "#f8f9fa"
   },
   "tabBar": {
     "backgroundColor": "#f8f9fa",

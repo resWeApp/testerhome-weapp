@@ -2,9 +2,9 @@ module.exports = Page({
   data: {
   },
   onReady() {
-    wx.setNavigationBarTitle({
-      title: 'title'
-    })
+    // wx.setNavigationBarTitle({
+    //   title: 'title'
+    // })
   },
   onLoad() {
   }
