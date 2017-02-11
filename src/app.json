@@ -3,7 +3,7 @@
     "backgroundTextStyle": "light",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "TesterHome",
-    "navigationBarBackgroundColor": "#f8f9fa"
+    "navigationBarBackgroundColor": "white"
   },
   "tabBar": {
     "backgroundColor": "#f8f9fa",
