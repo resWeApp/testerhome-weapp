@@ -4,5 +4,25 @@
     "navigationBarTextStyle": "red",
     "navigationBarTitleText": "testerhome",
     "navigationBarBackgroundColor": "red"
+  },
+  "tabBar": {
+    "backgroundColor": "#fbfbfb",
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "color": "#fbfbfb",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/Home/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": ""
+      },
+      {
+        "text": "首页",
+        "pagePath": "pages/Home/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": ""
+      }
+    ]
   }
 }
