@@ -1,8 +1,9 @@
 import i18n from '../../../utils/i18n'
-import {API_URL} from '../../../utils/url'
+import {API_URL} from '../../../utils/urls'
 
 module.exports = Page({
   data: {
+    topics: []
   },
   onReady() {
     wx.setNavigationBarTitle({
@@ -10,15 +11,18 @@ module.exports = Page({
     })
   },
   onLoad() {
+    const {onRequestSuccess} = this
+
     wx.request({
       url: `${API_URL}/topics.json`,
       success(response) {
-        console.log(response)
+        onRequestSuccess(response)
       }
     })
   },
   onRequestSuccess(response) {
-    console.log('onRequestSuccess')
-    // this.setData({})
+    this.setData({
+      topics: response.data.topics
+    })
   }
 })
