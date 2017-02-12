@@ -31,7 +31,7 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/layouts/Explore/index",
+        "pagePath": "pages/layouts/CurrentUser/index",
         "iconPath": "images/users_light.png",
         "selectedIconPath": "images/users_dark.png"
       }
