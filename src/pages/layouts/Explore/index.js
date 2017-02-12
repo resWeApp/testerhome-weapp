@@ -9,5 +9,8 @@ module.exports = Page({
     })
   },
   onLoad() {
+    wx.switchTab({
+      url: '/pages/layouts/CurrentUser/index'
+    })
   }
 })
