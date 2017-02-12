@@ -45,8 +45,17 @@ gulp.task('json', () => {
     }).map((n) => {
       return n.replace(/^src\//g, '').replace(/\.js$/g, '')
     })
+    const contentJSON = JSON.parse(content)
+    const {tabBar} = contentJSON
 
-    next(null, JSON.stringify(Object.assign(JSON.parse(content), {
+    next(null, JSON.stringify(Object.assign(contentJSON, {
+      tabBar: Object.assign(tabBar, {
+        list: tabBar.list.map((item) => {
+          return Object.assign(item, {
+            pagePath: `${item.pagePath.replace(/\/index$/g, '')}/index`
+          })
+        })
+      }),
       pages: pages
     }), null, 2))
   })).pipe(gulp.dest(DESTINATION_DIR))
