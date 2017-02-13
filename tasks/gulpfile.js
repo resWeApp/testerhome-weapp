@@ -40,24 +40,22 @@ gulp.task('toml', () => {
 
 gulp.task('json', () => {
   return gulp.src(`${SOURCES_PATTERN}.json`).pipe(change((content, next) => {
-    const pages = glob.sync(`${SOURCES_PATTERN}.js`).filter((path) => {
+    const contentJS = JSON.parse(content)
+    const {tabBar} = contentJS
+
+    contentJS.pages = glob.sync(`${SOURCES_PATTERN}.js`).filter((path) => {
       return path.match(/\/[A-Z](\w+)?\//g)
     }).map((n) => {
       return n.replace(/^src\//g, '').replace(/\.js$/g, '')
     })
-    const contentJSON = JSON.parse(content)
-    const {tabBar} = contentJSON
+    
+    contentJS.tabBar.list = tabBar.list.map((item) => {
+      return Object.assign(item, {
+        pagePath: `${item.pagePath.replace(/\/index$/g, '')}/index`
+      })
+    })
 
-    next(null, JSON.stringify(Object.assign(contentJSON, {
-      tabBar: Object.assign(tabBar, {
-        list: tabBar.list.map((item) => {
-          return Object.assign(item, {
-            pagePath: `${item.pagePath.replace(/\/index$/g, '')}/index`
-          })
-        })
-      }),
-      pages: pages
-    }), null, 2))
+    next(null, JSON.stringify(contentJS, null, 2))
   })).pipe(gulp.dest(DESTINATION_DIR))
 })
 
