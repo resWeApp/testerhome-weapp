@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "watch": "gulp",
     "build": "trash dist/* !dist/.gitignore && gulp build"
   },
   "devDependencies": {
