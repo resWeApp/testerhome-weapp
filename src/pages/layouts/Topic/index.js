@@ -23,7 +23,13 @@ module.exports = Page({
   },
   onRequestSuccess(response) {
     this.setData({
-      topics: response.data.topics
+      topics: response.data.topics.map((item) => {
+        return Object.assign(item, {
+          user: Object.assign(item.user, {
+            avatar_url: resolveUserAvatarUrl(item.user.avatar_url)
+          })
+        })
+      })
     })
   }
 })

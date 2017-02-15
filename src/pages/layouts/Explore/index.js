@@ -11,7 +11,7 @@ module.exports = Page({
   },
   onLoad() {
     wx.switchTab({
-      url: linkTo('layouts/CurrentUser')
+      url: linkTo('layouts/Topic')
     })
   }
 })
