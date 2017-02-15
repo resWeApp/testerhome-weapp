@@ -1,5 +1,6 @@
 import i18n from '../../../utils/i18n'
 import {API_URL} from '../../../utils/urls'
+import {resolveUserAvatarUrl} from '../../../utils/links'
 
 module.exports = Page({
   data: {
