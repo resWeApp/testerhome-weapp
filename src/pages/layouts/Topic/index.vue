@@ -1,6 +1,8 @@
-<view wx:for="{{topics}}" wx:key="{{index}}">
-  <view bindtap="navigate" data-id="{{item.id}}">{{item.title}}</view>
-  <image class="item-user-avatar" src="{{item.user.avatar_url}}"></image>
+<view class="item-container" wx:for="{{topics}}" wx:key="{{index}}">
+  <image class="item-user-avatar" src="{{item.user.avatar_url}}" bindtap="tapToUserProfile"></image>
+  <view class="item-text-container" bindtap="tapToTopicItem" data-id="{{item.id}}">
+    <view>{{item.title}}</view>
+  </view>
 </view>
 
 <!-- <view wx:for="{{topics}}" wx:key="{{index}}">
