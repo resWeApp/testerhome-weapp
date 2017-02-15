@@ -1,4 +1,5 @@
 import i18n from '../../../utils/i18n'
+import pages from '../../../utils/pages'
 
 module.exports = Page({
   data: {
@@ -10,7 +11,7 @@ module.exports = Page({
   },
   onLoad() {
     wx.switchTab({
-      url: '/pages/layouts/CurrentUser/index'
+      url: pages('layouts/CurrentUser')
     })
   }
 })
