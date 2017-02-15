@@ -14,12 +14,17 @@ module.exports = Page({
   onLoad() {
     const {onRequestSuccess} = this
 
+    wx.showNavigationBarLoading()
     wx.request({
       url: `${API_URL}/topics.json`,
       success(response) {
         onRequestSuccess(response)
+        wx.hideNavigationBarLoading()
       }
     })
+  },
+  onPullDownRefresh() {
+    wx.stopPullDownRefresh()
   },
   onRequestSuccess(response) {
     this.setData({
