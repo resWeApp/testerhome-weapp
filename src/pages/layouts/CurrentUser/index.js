@@ -4,9 +4,6 @@ module.exports = Page({
   data: {
   },
   onReady() {
-    wx.setNavigationBarTitle({
-      title: i18n.zh_CN.me
-    })
   },
   onLoad() {
   }
