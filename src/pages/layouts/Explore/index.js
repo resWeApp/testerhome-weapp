@@ -1,5 +1,5 @@
 import i18n from '../../../utils/i18n'
-import pages from '../../../utils/pages'
+import {linkTo} from '../../../utils/links'
 
 module.exports = Page({
   data: {
@@ -11,7 +11,7 @@ module.exports = Page({
   },
   onLoad() {
     wx.switchTab({
-      url: pages('layouts/CurrentUser')
+      url: linkTo('layouts/CurrentUser')
     })
   }
 })
