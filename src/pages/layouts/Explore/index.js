@@ -1,5 +1,4 @@
 import i18n from '../../../utils/i18n'
-import {linkTo} from '../../../utils/links'
 
 module.exports = Page({
   data: {
@@ -10,8 +9,5 @@ module.exports = Page({
     })
   },
   onLoad() {
-    wx.switchTab({
-      url: linkTo('layouts/Topic')
-    })
   }
 })

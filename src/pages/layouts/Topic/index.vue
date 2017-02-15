@@ -1,6 +1,6 @@
 <view wx:for="{{topics}}" wx:key="{{index}}">
   <view bindtap="navigate" data-id="{{item.id}}">{{item.title}}</view>
-  <image src="{{item.user.avatar_url}}"></image>
+  <image class="item-user-avatar" src="{{item.user.avatar_url}}"></image>
 </view>
 
 <!-- <view wx:for="{{topics}}" wx:key="{{index}}">
