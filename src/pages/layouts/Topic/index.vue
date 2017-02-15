@@ -1,16 +1,14 @@
 <view class="item-container" wx:for="{{topics}}" wx:key="{{index}}">
-  <image class="item-user-avatar" src="{{item.user.avatar_url}}" bindtap="tapToUserProfile"></image>
+  <image class="item-user-avatar" src="{{item.user.avatar_url}}" bindtap="tapToUserProfile" data-user-login="{{item.user.login}}"></image>
   <view class="item-text-container" bindtap="tapToTopicItem" data-id="{{item.id}}">
     <view class="item-text-title">{{item.title}}</view>
+    <view class="item-text-node-name">{{item.node_name}}</view>
+    <view class="item-text-user-name">{{item.user.name}}</view>
   </view>
 </view>
 
 <!-- <view wx:for="{{topics}}" wx:key="{{index}}">
-  <view bindtap="navigate" data-id="{{item.id}}">{{item.title}}</view>
-  <view bindtap="navigate" data-user-login="{{item.user.login}}">{{item.user.name}}</view>
-  <view bindtap="navigate" data-node-id="{{item.node_id}}">{{item.node_name}}</view>
   <view bindtap="navigate" data-id="{{item.id}}">{{item.created_at}}</view>
   <view bindtap="navigate" data-id="{{item.id}}">{{item.likes_count}}</view>
   <view bindtap="navigate" data-id="{{item.id}}">{{item.replies_count}}</view>
-  <image src="{{ROOT_URL + item.user.avatar_url.replace(/\!.+$/, '!md')}}"></image>
 </view> -->
