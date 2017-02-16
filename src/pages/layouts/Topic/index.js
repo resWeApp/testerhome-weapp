@@ -5,7 +5,10 @@ import {resolveUserAvatarUrl} from '../../../utils/links'
 
 module.exports = Page({
   data: {
-    topics: []
+    topics: [],
+    strings: {
+      middot: String.fromCharCode(183)
+    }
   },
   onReady() {
     wx.setNavigationBarTitle({
