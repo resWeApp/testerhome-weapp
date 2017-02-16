@@ -48,7 +48,7 @@ gulp.task('json', () => {
     }).map((n) => {
       return n.replace(/^src\//g, '').replace(/\.js$/g, '')
     })
-    
+
     contentJS.tabBar.list = tabBar.list.map((item) => {
       return Object.assign(item, {
         pagePath: `${item.pagePath.replace(/\/index$/g, '')}/index`
@@ -61,6 +61,12 @@ gulp.task('json', () => {
 
 gulp.task('images', () => {
   return gulp.src(`${SOURCES_PATTERN}.png`).pipe(gulp.dest(DESTINATION_DIR))
+})
+
+gulp.task('packages', () => {
+  return gulp.src(['moment'].map((n) => {
+    return `node_modules/*${n}/**/*`
+  })).pipe(gulp.dest(`${DESTINATION_DIR}/packages`))
 })
 
 gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'images', 'stylus')))
