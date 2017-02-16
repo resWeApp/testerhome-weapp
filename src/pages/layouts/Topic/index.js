@@ -41,5 +41,7 @@ module.exports = Page({
         })
       })
     })
+  },
+  navigateToTopicDetail() {
   }
 })
