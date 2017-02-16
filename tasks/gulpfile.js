@@ -69,7 +69,7 @@ gulp.task('packages', () => {
   })).pipe(gulp.dest(`${DESTINATION_DIR}/packages`))
 })
 
-gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'images', 'stylus')))
+gulp.task('build', gulp.series('json', 'toml', gulp.parallel('vue', 'babel', 'images', 'stylus', 'packages')))
 
 gulp.task('watch', () => {
   gulp.watch(`${SOURCES_PATTERN}.vue`, gulp.series('vue'))
