@@ -64,8 +64,11 @@ gulp.task('images', () => {
 })
 
 gulp.task('packages', () => {
-  return gulp.src(['moment'].map((n) => {
-    return `node_modules/*${n}/**/*`
+  return gulp.src([
+    'moment/moment',
+    'moment/locale/zh-cn'
+  ].map((n) => {
+    return `node_modules/*${n}.js`
   })).pipe(gulp.dest(`${DESTINATION_DIR}/packages`))
 })
 
