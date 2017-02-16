@@ -4,6 +4,7 @@
     <view class="item-text-title">{{item.title}}</view>
     <view class="item-text-node-name">{{item.node_name}}</view>
     <view class="item-text-user-name">{{item.user.name}}</view>
+    <view class="item-text-created-at">{{item.created_at}}</view>
   </view>
 </view>
 

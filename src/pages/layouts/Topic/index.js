@@ -1,5 +1,6 @@
 import i18n from '../../../utils/i18n'
 import {API_URL} from '../../../utils/urls'
+import timeago from '../../../utils/timeago'
 import {resolveUserAvatarUrl} from '../../../utils/links'
 
 module.exports = Page({
@@ -32,7 +33,8 @@ module.exports = Page({
         return Object.assign(item, {
           user: Object.assign(item.user, {
             avatar_url: resolveUserAvatarUrl(item.user.avatar_url)
-          })
+          }),
+          created_at: timeago(item.created_at)
         })
       })
     })
